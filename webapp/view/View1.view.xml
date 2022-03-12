@@ -1,8 +1,39 @@
-<mvc:View
-	controllerName="emc.hr.payroll.controller.View1"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	
->
-<Button text="Go to " icon="sap-icon://arrow-right" press="onNext"/>
+<mvc:View controllerName="emc.hr.payroll.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page title='View1'>
+        <headerContent>
+            <Button icon="sap-icon://action" press="onNext"></Button>
+        </headerContent>
+        <content>
+            <SearchField id='idSF'></SearchField>
+            <List id='idLST'>
+                <items>
+                    <DisplayListItem value='Natural antibiotic' label='Apple'></DisplayListItem>
+                    <StandardListItem title='Orange' description='The most rich food in the world' icon='https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2404/files/2021/10/orangers.jpg'></StandardListItem>
+                    <InputListItem>
+                        <HBox>
+                            <Label text="What is the best food for skin"></Label>
+                            <Input />
+                        </HBox>
+                    </InputListItem>
+                    <CustomListItem>
+                        <Label text="Do you want COD"></Label>
+                        <Switch />
+                    </CustomListItem>
+                    <ObjectListItem title='Banana' intro='This is the great source of potassium' icon='https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bananas-218094b-scaled.jpg' number='150INR' numberUnit='Per dozon'>
+                    <attributes>
+                        <ObjectAttribute text='Yellow Green' title="Color"></ObjectAttribute>
+                        <ObjectAttribute text="Dozon" title="Unit" ></ObjectAttribute>
+                    </attributes>
+                    <firstStatus>
+                        <ObjectStatus text='Out of Stock' state='Warning'></ObjectStatus>
+                    </firstStatus>
+                    </ObjectListItem>
+                    <FeedListItem icon='https://old.ibu.edu.ba/wp-content/uploads/2021/05/P20210303AS-1901-cropped.jpg' sender='Joie Biden' text='Hey! Ashik how are you doing?' timestamp='Monday,7th April'></FeedListItem>
+                    <ActionListItem press='onItemClick' text="Order Now"></ActionListItem>
+                </items>
+            </List>
+        </content>
+        <!-- <Button text="Go to " icon="sap-icon://arrow-right" press="onNext"/> -->
+    </Page>
+
 </mvc:View>

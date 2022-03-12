@@ -17,13 +17,13 @@ sap.ui.define(['sap/ui/core/UIComponent'], function (UIComponent) {
       // step:1 Create View1 Object
       var oView1 = sap.ui.view({
         viewName: 'emc.hr.payroll.view.View1',
-        id: 'idAppView1',
+        id: 'idView1',
         type: 'XML',
       });
       // step:2 Create View2 Object
       var oView2 = sap.ui.view({
         viewName: 'emc.hr.payroll.view.View2',
-        id: 'idAppView2',
+        id: 'idView2',
         type: 'XML',
       });
       //step:3 Get the App Container Control Object from APP.view.xml

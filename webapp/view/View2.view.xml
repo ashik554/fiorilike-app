@@ -1,3 +1,13 @@
 <mvc:View controllerName="emc.hr.payroll.controller.View2" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-    <Button text="Back" icon="sap-icon://arrow-left" press="onBack" />
+   <Page title='View2' showNavButton="true" navButtonPress="onBack">
+       
+    <!-- <Button text="Back" icon="sap-icon://arrow-left" press="onBack" /> -->
+    <footer>
+       <Toolbar >
+          <ToolbarSpacer ></ToolbarSpacer>
+          <Button text="Order" type="Emphasized"></Button>
+          <Button text="Cancel" type="Reject" ></Button>
+       </Toolbar>
+    </footer>
+   </Page>
 </mvc:View>
