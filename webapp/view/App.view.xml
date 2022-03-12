@@ -1,0 +1,9 @@
+<mvc:View
+	controllerName="emc.hr.payroll.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	
+>
+<!-- This will be our Container controll which will be parent for the other viiew, there are different types of controller -->
+<App id='appCon'/>
+</mvc:View>

@@ -1,0 +1,8 @@
+<mvc:View
+	controllerName="emc.hr.payroll.controller.View1"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	
+>
+<Button text="Go to " icon="sap-icon://arrow-right" press="onNext"/>
+</mvc:View>
