@@ -5,5 +5,5 @@
 	
 >
 <!-- This will be our Container controll which will be parent for the other viiew, there are different types of controller -->
-<App id='appCon'/>
+<SplitApp id='appCon'/>
 </mvc:View>

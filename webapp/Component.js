@@ -2,9 +2,11 @@ sap.ui.define(['sap/ui/core/UIComponent'], function (UIComponent) {
   'use strict';
 
   return UIComponent.extend('emc.hr.payroll.Component', {
-    metadata: {},
+    metadata: {
+      manifest: 'json',
+    },
     init: function () {
-      // this line will call the base constructor(Here base class is UIComponet)
+      //base constructor
       UIComponent.prototype.init.apply(this);
     },
     createContent: function () {
@@ -13,24 +15,22 @@ sap.ui.define(['sap/ui/core/UIComponent'], function (UIComponent) {
         id: 'idAppView',
         type: 'XML',
       });
-
-      // step:1 Create View1 Object
+      // step 1 create view1 object
       var oView1 = sap.ui.view({
         viewName: 'emc.hr.payroll.view.View1',
         id: 'idView1',
         type: 'XML',
       });
-      // step:2 Create View2 Object
+      //create view2
       var oView2 = sap.ui.view({
         viewName: 'emc.hr.payroll.view.View2',
         id: 'idView2',
         type: 'XML',
       });
-      //step:3 Get the App Container Control Object from APP.view.xml
+      ///get app container controll object
       var oAppCon = oView.byId('appCon');
-      // step:4 Inject the view1 and view2 inside the container
-      oAppCon.addPage(oView1).addPage(oView2);
-
+      ///inject view1 view inside container
+      oAppCon.addMasterPage(oView1).addDetailPage(oView2);
       return oView;
     },
   });

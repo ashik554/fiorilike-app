@@ -1,13 +1,19 @@
 <mvc:View controllerName="emc.hr.payroll.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-    <Page title='View1'>
+    <Page title="{i18n>XTIT_VIEW1}">
         <headerContent>
             <Button icon="sap-icon://action" press="onNext"></Button>
         </headerContent>
         <content>
-            <SearchField id='idSF'></SearchField>
-            <List id='idLST'>
+            <SearchField id='idSF' search='onSearch' liveChange='onSearch'></SearchField>
+            <List itemPress='onNavNext' id='idLST' mode='Delete' delete='onDelete' items='{
+                path:"/fruits",
+                sorter:{
+                    path:"name"
+                }
+            }'>
                 <items>
-                    <DisplayListItem value='Natural antibiotic' label='Apple'></DisplayListItem>
+                    <ObjectListItem intro='{taste}' title='{name}' number='{price}' numberUnit='{curr}' icon='{image}' type='Navigation'></ObjectListItem>
+                    <!-- <DisplayListItem value='Natural antibiotic' label='Apple'></DisplayListItem>
                     <StandardListItem title='Orange' description='The most rich food in the world' icon='https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2404/files/2021/10/orangers.jpg'></StandardListItem>
                     <InputListItem>
                         <HBox>
@@ -29,7 +35,7 @@
                     </firstStatus>
                     </ObjectListItem>
                     <FeedListItem icon='https://old.ibu.edu.ba/wp-content/uploads/2021/05/P20210303AS-1901-cropped.jpg' sender='Joie Biden' text='Hey! Ashik how are you doing?' timestamp='Monday,7th April'></FeedListItem>
-                    <ActionListItem press='onItemClick' text="Order Now"></ActionListItem>
+                    <ActionListItem press='onItemClick' text="Order Now"></ActionListItem> -->
                 </items>
             </List>
         </content>
