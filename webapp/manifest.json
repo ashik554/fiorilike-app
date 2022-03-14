@@ -28,11 +28,51 @@
         "sap.m": {
           "minVersion": "1.34.0"
         },
+
         "sap.ui.commons": {
           "minVersion": "1.34.0",
           "lazy": true
         },
         "sap.ui.table": {}
+      }
+    },
+    "rootView": {
+      "id": "idAppView",
+      "type": "XML",
+      "viewName": "emc.hr.payroll.view.App"
+    },
+    "routing": {
+      "config": {
+        "viewPath": "emc.hr.payroll.view",
+        "viewType": "XML",
+        "controlId": "appCon",
+        "clearControlAggregation": true
+      },
+      "routes": [
+        {
+          "name": "master",
+          "pattern": "",
+          "target": ["joe", "biden"]
+        },
+        {
+          "name": "detail",
+          "pattern": "fruits",
+          "target": ["joe", "modi"]
+        }
+      ],
+      "targets": {
+        "joe": {
+          "viewName": "View1",
+          "controlAggregation": "masterPages"
+        },
+        "biden": {
+          "viewName": "Empty",
+          "controlAggregation": "detailPages"
+        },
+        "modi": {
+          "viewName": "View2",
+          "controlAggregation": "detailPages"
+        }
       }
     },
     "contentDensities": {

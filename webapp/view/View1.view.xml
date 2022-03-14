@@ -5,14 +5,22 @@
         </headerContent>
         <content>
             <SearchField id='idSF' search='onSearch' liveChange='onSearch'></SearchField>
-            <List itemPress='onNavNext' id='idLST' mode='Delete' delete='onDelete' items='{
+            <List itemPress='onNavNext' selectionChange='onFruitSelect' id='idLST' mode='SingleSelectMaster' delete='onDelete' items='{
                 path:"/fruits",
                 sorter:{
                     path:"name"
                 }
             }'>
+
+                <headerToolbar>
+                    <Toolbar>
+                        <ToolbarSpacer></ToolbarSpacer>
+                        <Button icon='sap-icon://delete' press='onDeleteItems' />
+                    </Toolbar>
+                </headerToolbar>
+
                 <items>
-                    <ObjectListItem intro='{taste}' title='{name}' number='{price}' numberUnit='{curr}' icon='{image}' type='Navigation'></ObjectListItem>
+                    <ObjectListItem intro='{taste}' title='{name}' number='{price}' numberUnit='{curr}' icon='{image}' ></ObjectListItem>
                     <!-- <DisplayListItem value='Natural antibiotic' label='Apple'></DisplayListItem>
                     <StandardListItem title='Orange' description='The most rich food in the world' icon='https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2404/files/2021/10/orangers.jpg'></StandardListItem>
                     <InputListItem>

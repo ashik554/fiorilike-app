@@ -8,7 +8,11 @@ sap.ui.define(
     'use strict';
 
     return Controller.extend('emc.hr.payroll.controller.View1', {
-      onInit: function () {},
+      onInit: function () {
+        // the router object is readily available with component js
+        //so we getting the same
+        this.Router = this.getOwnerComponent().getRouter();
+      },
       onNext: function () {
         // step 1: get the parent control object- Container for our view
         var oAppCon = this.getView().getParent();
@@ -16,9 +20,23 @@ sap.ui.define(
         // step 2: ask parent to nav to next view
         oAppCon.to('idView2');
       },
+      onDeleteItems: function (oEvent) {
+        var oList = this.getView().byId('idLST');
+        var aSelectedItems = oList.getSelectedItems();
+        aSelectedItems.forEach((item) => {
+          oList.removeItem(item);
+        });
+      },
       onNavNext: function (oEvent) {
         this.onNext();
       },
+      onFruitSelect: function (oEvent) {
+        // 1.get the Router object
+        // this.Router
+        //2.Trigger the router
+        this.Router.navTo('detail');
+      },
+
       onDelete: function (oEvent) {
         // step1: find out which item was selected for deletion
         var oSelected = oEvent.getParameter('listItem');
